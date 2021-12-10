@@ -50,7 +50,7 @@ def get_user():
 def create_user_favorites():
     user = User.query.get(1)
     character = Character.query.filter_by(name = "leia").first()
-    planet = Planet.query.filter_by(name="Alderaan").first()
+    planet = Planet.query.filter_by(name="Tatooine").first()
 
     user.favorite_characters.append(character)
     user.favorite_planets.append(planet)
@@ -109,7 +109,7 @@ def list_planets():
         climate = "temperate",
         terrain = "grasslands, mountains",
         surface_water = "40",
-        name = "Tatooine"
+        name = "Alderaan"
     )
     db.session.add(planet)
     db.session.commit()
