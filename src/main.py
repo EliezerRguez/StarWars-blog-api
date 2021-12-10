@@ -50,7 +50,7 @@ def get_user():
 def create_user_favorites():
     user = User.query.get(1)
     character = Character.query.filter_by(name = "leia").first()
-    planet = Planet.query.filter_by(name="Tatooine").first()
+    planet = Planet.query.filter_by(name="Alderaan").first()
 
     user.favorite_characters.append(character)
     user.favorite_planets.append(planet)
@@ -77,7 +77,7 @@ def list_character():
         height = "172",
         mass = "77",
         hair_color = "black",
-        homeworld = "alderaan",
+        homeworld = "Alderaan",
         eye_color = "brown",
         gender = "female"
     )
